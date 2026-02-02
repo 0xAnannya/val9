@@ -1,0 +1,40 @@
+:root {
+  font-family: 'Great Vibes', cursive;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #8b2a2a;
+  background-color: #f8f4ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Valentine page uses its own wood background; keep root neutral */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid rgba(139, 42, 42, 0.5);
+  outline-offset: 2px;
+}

@@ -1,0 +1,58 @@
+.heart {
+  position: relative;
+  width: 120px;
+  height: 110px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  /* Heart shape via clip-path (approximate) */
+  clip-path: path(
+    'M60 95 C60 95 5 55 5 32 C5 12 30 2 60 22 C90 2 115 12 115 32 C115 55 60 95 60 95'
+  );
+  -webkit-clip-path: path(
+    'M60 95 C60 95 5 55 5 32 C5 12 30 2 60 22 C90 2 115 12 115 32 C115 55 60 95 60 95'
+  );
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease;
+}
+
+.heart:hover {
+  transform: scale(1.05);
+}
+
+.heart:active {
+  transform: scale(0.98);
+}
+
+/* Red heart – Yes */
+.yes {
+  background: linear-gradient(145deg, #c41e3a 0%, #8b2a2a 100%);
+  color: #fff;
+}
+
+.yes:hover {
+  background: linear-gradient(145deg, #d62839 0%, #9b3333 100%);
+}
+
+/* Beige heart – No */
+.no {
+  background: linear-gradient(145deg, #f5e6d3 0%, #e8d5c4 100%);
+  color: #4a3728;
+}
+
+.no:hover {
+  background: linear-gradient(145deg, #f8ecd8 0%, #ecd9c8 100%);
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
